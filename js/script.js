@@ -16,6 +16,9 @@ x.addEventListener("mouseenter", movecss, { once: true });
 x.addEventListener("mouseenter", movepython, { once: true });
 x.addEventListener("mouseenter", movec, { once: true });
 x.addEventListener("mouseenter", movereact, { once: true });
+x.addEventListener("mouseenter", moveemeb, { once: true });
+x.addEventListener("mouseenter", movejava, { once: true });
+x.addEventListener("mouseenter", moveni, { once: true });
 function move() {
   var i = 0;
   if (i == 0) {
@@ -62,7 +65,7 @@ function movepython() {
     var width = 10;
     var id = setInterval(frame, 10);
     function frame() {
-      if (width >= 80) {
+      if (width >= 85) {
         clearInterval(id);
         i = 0;
       } else {
@@ -82,7 +85,7 @@ function movec() {
     var width = 10;
     var id = setInterval(frame, 10);
     function frame() {
-      if (width >= 70) {
+      if (width >= 80) {
         clearInterval(id);
         i = 0;
       } else {
@@ -103,6 +106,66 @@ function movereact() {
     var id = setInterval(frame, 10);
     function frame() {
       if (width >= 60) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
+  }
+}
+
+function moveemeb() {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBarembed");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 75) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
+  }
+}
+
+function movejava() {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBarjava");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 50) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
+  }
+}
+
+function moveni() {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBarni");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 50) {
         clearInterval(id);
         i = 0;
       } else {
